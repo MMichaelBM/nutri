@@ -1,77 +1,121 @@
-/* Estilos para dispositivos de tela grande */
 body {
-  background-image: url(imagens/back11.jpg);
-  color: rgb(223, 171, 128);
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+    background-image: url(imagens/back11.jpg);
+    color: rgb(223, 171, 128);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
 
+}
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+#title {
+    flex-direction: column;
+    line-height: 10px;
 }
-
-ul li {
-  display: inline-block;
-  margin: 0 10px;
+li {
+    display: inline-block;
+    margin: 20px;
 }
-
 main {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50;
 }
-
-.fisio-services,
-.nutrition-services,
-.rede,
-.ctt {
-  width: 45%;
-  float: left;
-  margin: 10px;
-  border: 1px solid #ccc;
-  padding: 20px;
-  box-sizing: border-box;
-  color: rgb(82, 67, 81);
-  transition: 0.5s;
+h2 {
+    font-size: 55px;
+    line-height: 10px;
 }
-
-/* Estilos para dispositivos móveis */
-@media screen and (max-width: 768px) {
-  header {
-      flex-direction: column;
-      text-align: center;
+span {
+    color: rgb(58, 56, 56);
+}
+footer {
+    width: 100%;
+    height: 50px; /* Altura do rodapé */
+    position: fixed; /* Posição fixa na parte inferior da janela de visualização */
+    bottom: 0; /* Alinha o rodapé na parte inferior */
+    text-align: center; /* Centraliza o conteúdo do rodapé */
+    color: rgb(34, 30, 30);
+    left: 0;
+    right: 0; /* Centraliza horizontalmente */
+}
+a:hover {
+    background-color: rgb(223, 171, 128);
+}
+a {
+    color: rgba(102, 99, 99, 0.877);
+}
+.inicial {
+    background-color: rgb(245, 246, 247);
+    color: rgb(141, 124, 124);
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Estilos para a div container */
+.container {
+    width: 100%; /* Define a largura máxima */
+    max-width: 1200px; /* Define uma largura máxima para o conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo na página */
+    overflow: hidden; /* Limpa o float */
   }
-
-  #title {
-      line-height: 1.2;
-  }
-
-  ul li {
-      display: block;
-      margin: 10px 0;
-  }
-
-  main {
-      flex-direction: column;
-      align-items: center;
-      margin-top: 20px;
-  }
-
+  
+  /* Estilos para as divs de serviços */
   .fisio-services,
-  .nutrition-services,
-  .rede,
-  .ctt {
-      width: 100%;
-      float: none;
+  .nutrition-services {
+    width: 45%; /* Largura das divs de serviços */
+    float: left; /* Faz com que as divs fiquem lado a lado */
+    margin: 10px; /* Espaçamento entre as divs */
+    border: 1px solid #ccc; /* Borda para visualização */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
+    color: rgb(82, 67, 81);
+    transition: 0.5s;
   }
+  
+  /* Estilos para melhorar a aparência */
+  h2 {
+    text-align: center; /* Centralizar o texto do título */
+    color: black;
+  }
+  .plano {
+    color: black;
+  }
+  #resultado {
+    color: red;
+    font-size: large;
+  }
+  #calculadora {
+    text-align: center;
+  }
+  #status {
+
+    color: black;
+    
 }
+.rede, .ctt{
+  width: 45%; /* Largura das divs de serviços */
+    float: left; /* Faz com que as divs fiquem lado a lado */
+    margin: 10px; /* Espaçamento entre as divs */
+    border: 1px solid #ccc; /* Borda para visualização */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
+    color: rgb(82, 67, 81)
+}
+.imaginicial{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.imginicial:hover{
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+.fisio-services:hover {
+    webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5)); }
+  
+.nutrition-services:hover {
+  -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5)); }
