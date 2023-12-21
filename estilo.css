@@ -71,6 +71,7 @@ a {
     padding: 20px; /* Espaçamento interno */
     box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
     color: rgb(82, 67, 81);
+    transition: 0.5s;
   }
   
   /* Estilos para melhorar a aparência */
@@ -102,3 +103,19 @@ a {
     box-sizing: border-box; /* Inclui padding e borda na largura e altura total */
     color: rgb(82, 67, 81)
 }
+.imaginicial{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.imginicial:hover{
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+}
+.fisio-services:hover {
+    webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5)); }
+  
+.nutrition-services:hover {
+  webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5)); }
