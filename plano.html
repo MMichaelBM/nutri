@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Seu código existente... -->
+    <link href="estilo.css" rel="stylesheet">
+    <title>Nutrição</title>
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Nutrição &</h1>
+            <h1>Fisioterapia</h1>
+        </div>
+        <ul>
+            <a href="index.html"><li>Inicio</li></a>
+            <a href="servicos.html"><li>Serviços</li></a>
+            <a href="plano.html"><li>Já tem um plano alimentar?</li></a>
+            <a href="contato.html"><li>Contato</li></a>
+        </ul>
+    </header>
+       <h2 style="margin-bottom: 10px;">Plano alimentar</h2>
+        <p><h3 style="text-align: center; font-size: 2em; margin-bottom: 10px;">A Importância de um Plano Alimentar Adequado</h3></p>
+
+        <div class="plano">
+            Um <b>plano alimentar é mais que uma lista de alimentos</b>; é um guia para atender às necessidades individuais. Ele proporciona nutrientes essenciais para fortalecer o corpo, estabilizar a energia e prevenir doenças crônicas como diabetes e obesidade. Além disso, é fundamental para atletas, recuperação pós-cirúrgica e melhor desempenho físico e mental.
+            
+            <b><p>Educar sobre grupos alimentares e porções adequadas</b> é crucial para escolhas conscientes. Investir em hábitos alimentares desde cedo estabelece bases sólidas para uma vida saudável. Um plano alimentar não é apenas sobre restrições, mas um instrumento poderoso para promover saúde, prevenir doenças e garantir qualidade de vida.</p>
+            
+            Ao garantir a ingestão adequada de nutrientes, ele fortalece o <b>sistema imunológico</b> e reduz riscos de doenças cardíacas. Compreender os benefícios dos alimentos tomados diariamente ajuda a fazer escolhas saudáveis. É um investimento valioso para a longevidade e o bem-estar físico e mental, proporcionando um estilo de vida equilibrado e vibrante.</p>
+        </div>
+    <!-- Seção da calculadora de IMC -->
+    <section id="calculadora">
+        <h2>Calculadora de IMC</h2>
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso">
+
+        <label for="altura">Altura (m):</label>
+        <input type="number" id="altura" name="altura">
+
+        <button onclick="calcularIMC()">Calcular</button>
+
+        <div id="resultado"></div>
+        <div id="status"></div> <!-- Esta div mostrará o status de peso -->
+    </section>
+    
+    <footer>
+        Todos os direitos reservados. ITAPIPOCA - CE (85) 91111-1111
+    </footer>
+
+    <!-- Script JavaScript para o cálculo de IMC e status de peso -->
+    <script>
+        function calcularIMC() {
+            var peso = parseFloat(document.getElementById('peso').value);
+            var altura = parseFloat(document.getElementById('altura').value);
+
+            if (peso > 0 && altura > 0) {
+                var imc = peso / (altura * altura);
+                document.getElementById('resultado').innerHTML = 'Seu IMC é: ' + imc.toFixed(2);
+
+                var status = '';
+                if (imc < 18.5) {
+                    status = 'Você está abaixo do peso.';
+                } else if (imc >= 18.5 && imc < 25) {
+                    status = 'Seu peso está normal. Parabéns! Não deixe de se alimentar bem.';
+                } else if (imc >= 25 && imc < 30) {
+                    status = 'Você está acima do peso. Podemos lhe ajudar para atingir sua meta e ter um estilo de vida mais saudável.';
+                } else {
+                    status = 'Você está obeso. Podemos lhe ajudar para atingir sua meta e ter um estilo de vida mais saudável!';
+                }
+
+                document.getElementById('status').innerHTML = status;
+            } else {
+                document.getElementById('resultado').innerHTML = 'Por favor, insira valores válidos para peso e altura.';
+                document.getElementById('status').innerHTML = '';
+            }
+        }
+    </script>
+</body>
+</html>
